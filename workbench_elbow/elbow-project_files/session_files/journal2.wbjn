@@ -1,0 +1,556 @@
+# encoding: utf-8
+# 2021 R2
+SetScriptVersion(Version="21.2.209")
+system1 = GetSystem(Name="FFF")
+setup1 = system1.GetContainer(ComponentName="Setup")
+fluentLauncherSettings1 = setup1.GetFluentLauncherSettings()
+fluentLauncherSettings1.SetEntityProperties(Properties=Set(EnvPath={}))
+setup1.Edit()
+setup1.SendCommand(Command='(cx-gui-do cx-activate-tab-index "NavigationPane*Frame1(TreeTab)" 0)(cx-gui-do cx-activate-tab-index "NavigationPane*Frame1(TreeTab)" 1)')
+setup1.SendCommand(Command='/file/set-tui-version "21.2"(cx-gui-do cx-activate-item "Key Behavioral Changes*PanelButtons*PushButton1(OK)")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Solution|Monitors|Report Files|temo-outlet-0-rfile"))(cx-gui-do cx-list-tree-right-click "NavigationPane*List_Tree1" )')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-temo-outlet-0-rfile*Delete")(cx-gui-do cx-activate-item "Question*OK")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Solution|Monitors|Report Plots|temo-outlet-0-rplot"))(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Solution|Monitors|Report Plots|temo-outlet-0-rplot"))(cx-gui-do cx-list-tree-right-click "NavigationPane*List_Tree1" )')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-temo-outlet-0-rplot*Delete")(cx-gui-do cx-activate-item "Question*OK")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Solution|Monitors|Report Plots|temp-outlet-0-rplot"))(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Solution|Monitors|Report Files|temp-outlet-0-rfile"))')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Solution|Monitors|Report Files|temp-outlet-0-rfile"))(cx-gui-do cx-activate-item "NavigationPane*List_Tree1")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Solution|Monitors|Report Files|temp-outlet-0-rfile"))(cx-gui-do cx-activate-item "Edit Report File*PanelButtons*PushButton1(OK)")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Solution|Monitors|Report Plots|temp-outlet-0-rplot"))')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Solution|Monitors|Report Plots|temp-outlet-0-rplot"))(cx-gui-do cx-activate-item "NavigationPane*List_Tree1")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Solution|Monitors|Report Plots|temp-outlet-0-rplot"))(cx-gui-do cx-activate-item "Edit Report Plot*PanelButtons*PushButton1(OK)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*Table3(Initialization)*PushButton5(Initialize)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*PushButton1(Run Calculation)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*PushButton1(Run Calculation)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*PushButton1(Run Calculation)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*PushButton1(Run Calculation)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*PushButton1(Run Calculation)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*PushButton1(Run Calculation)")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-integer-entry "Ribbon*Frame1*Frame5(Solution)*Table1*Table3(Run Calculation)*Table6*IntegerEntry16(No  of Iterations)" 250)(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*Table3(Run Calculation)*Table6*IntegerEntry16(No  of Iterations)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*Table3(Run Calculation)*PushButton7(Calculate)")')
+results1 = system1.GetContainer(ComponentName="Results")
+results1.Edit()
+results1.Exit()
+setup1.SendCommand(Command='(cx-use-window-id 1)(handle-key "control ??")(cx-use-window-id 1)(handle-key "control ??")(cx-gui-do cx-activate-item "Information*OK")(cx-use-window-id 2)(handle-key "control ??")(cx-use-window-id 51)(handle-key "control ??")(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Results|Graphics|Contours"))')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Results|Graphics|Contours"))(cx-gui-do cx-activate-item "NavigationPane*List_Tree1")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Results|Graphics|Contours"))')
+setup1.SendCommand(Command="(cx-gui-do cx-set-list-selections \"Contours*Table1*Frame3*Table1*DropDownList1(Contours of)\" '( 2))")
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Table1*DropDownList1(Contours of)")')
+setup1.SendCommand(Command="(cx-gui-do cx-set-list-selections \"Contours*Table1*Frame3*Frame2*List2(Surfaces)\" '( 1))(cx-gui-do cx-activate-item \"Contours*Table1*Frame3*Frame2*List2(Surfaces)\")(cx-gui-do cx-set-list-selections \"Contours*Table1*Frame3*Frame2*List2(Surfaces)\" '())(cx-gui-do cx-activate-item \"Contours*Table1*Frame3*Frame2*List2(Surfaces)\")(cx-gui-do cx-set-toggle-button2 \"Contours*Table1*Frame1*Frame3*ToggleBox1(Coloring)*Banded\" #t)(cx-gui-do cx-activate-item \"Contours*Table1*Frame1*Frame3*ToggleBox1(Coloring)*Banded\")(cx-gui-do cx-set-list-selections \"Contours*Table1*Frame3*Table1*DropDownList2\" '( 0))")
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Table1*DropDownList2")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-text-entry "Contours*Table1*TextEntry2(Contour Name)" "contour-vv")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")')
+setup1.SendCommand(Command="(cx-gui-do cx-set-list-selections \"Contours*Table1*Frame3*Frame2*List2(Surfaces)\" '())(cx-gui-do cx-activate-item \"Contours*Table1*Frame3*Frame2*List2(Surfaces)\")")
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")')
+setup1.SendCommand(Command="(cx-gui-do cx-set-list-selections \"Contours*Table1*Frame3*Frame2*List2(Surfaces)\" '())(cx-gui-do cx-activate-item \"Contours*Table1*Frame3*Frame2*List2(Surfaces)\")(cx-gui-do cx-set-list-selections \"Contours*Table1*Frame3*Frame2*List2(Surfaces)\" '( 1))(cx-gui-do cx-activate-item \"Contours*Table1*Frame3*Frame2*List2(Surfaces)\")(cx-gui-do cx-activate-item \"Contours*PanelButtons*PushButton1(OK)\")")
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "ToolBar*Pointer*translate")')
+setup1.SendCommand(Command="(cx-use-window-id 51)(dolly-camera 0.133219 0.0246701 0)(cx-use-window-id 51)(dolly-camera 0.0481859 -0.0116858 0)")
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "ToolBar*Pointer*rotate")')
+setup1.SendCommand(Command="(cx-use-window-id 51)(cx-set-camera-relative '(-0.142565 -0.364046 0.42796) '(0 0 0) '(0.160198 0.17142 0.164248) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(-0.591868 -0.54052 0.298384) '(0 0 0) '(0.161696 0.101524 0.247501) 0 0)(cx-use-window-id 51)(cx-set-camera-relative '(-0.133927 0.0916648 -0.0175676) '(0 0 0) '(0.00802572 -0.00871766 -0.0778677) 0 0)")
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "ToolBar*Pointer*translate")')
+setup1.SendCommand(Command="(cx-use-window-id 51)(dolly-camera 0.0899689 -0.0480756 0)(cx-use-window-id 51)(dolly-camera 0.0103671 0.0533229 0)(cx-use-window-id 51)")
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "ToolBar*Pointer*probe")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton2(Cancel)")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Results|Graphics|Contours"))(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Results|Graphics|Contours"))(cx-gui-do cx-list-tree-right-click "NavigationPane*List_Tree1" )')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-Contours*New...")')
+setup1.SendCommand(Command="(cx-gui-do cx-set-list-selections \"Contours*Table1*Frame3*Table1*DropDownList1(Contours of)\" '( 3))")
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Table1*DropDownList1(Contours of)")')
+setup1.SendCommand(Command="(cx-gui-do cx-set-toggle-button2 \"Contours*Table1*Frame1*Frame3*ToggleBox1(Coloring)*Banded\" #t)(cx-gui-do cx-activate-item \"Contours*Table1*Frame1*Frame3*ToggleBox1(Coloring)*Banded\")(cx-gui-do cx-set-list-selections \"Contours*Table1*Frame3*Frame2*List2(Surfaces)\" '( 1))(cx-gui-do cx-activate-item \"Contours*Table1*Frame3*Frame2*List2(Surfaces)\")")
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Frame2*List2(Surfaces)")')
+setup1.SendCommand(Command="(cx-gui-do cx-set-list-selections \"Contours*Table1*Frame3*Frame2*List2(Surfaces)\" '())(cx-gui-do cx-activate-item \"Contours*Table1*Frame3*Frame2*List2(Surfaces)\")(cx-gui-do cx-set-list-selections \"Contours*Table1*Frame3*Frame2*List2(Surfaces)\" '( 1))(cx-gui-do cx-activate-item \"Contours*Table1*Frame3*Frame2*List2(Surfaces)\")(cx-gui-do cx-set-list-selections \"Contours*Table1*Frame3*Frame2*List2(Surfaces)\" '())(cx-gui-do cx-activate-item \"Contours*Table1*Frame3*Frame2*List2(Surfaces)\")(cx-gui-do cx-set-list-selections \"Contours*Table1*Frame3*Frame2*List2(Surfaces)\" '( 1))(cx-gui-do cx-activate-item \"Contours*Table1*Frame3*Frame2*List2(Surfaces)\")(cx-gui-do cx-set-text-entry \"Contours*Table1*TextEntry2(Contour Name)\" \"contour-temp\")(cx-gui-do cx-set-list-selections \"Contours*Table1*Frame3*Table1*DropDownList2\" '( 1))")
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Table1*DropDownList2")')
+setup1.SendCommand(Command="(cx-gui-do cx-set-list-selections \"Contours*Table1*Frame3*Table1*DropDownList2\" '( 2))")
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Table1*DropDownList2")')
+setup1.SendCommand(Command="(cx-gui-do cx-set-list-selections \"Contours*Table1*Frame3*Table1*DropDownList2\" '( 0))")
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Contours*Table1*Frame3*Table1*DropDownList2")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton1(OK)")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Contours*PanelButtons*PushButton2(Cancel)")')
+setup1.SendCommand(Command="(cx-use-window-id 51)")
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "MenuBar*FileMenu*Close Fluent")(cx-gui-do cx-set-toggle-button2 "Settings have changed!*Table1*ToggleBox2*Use settings changes for current and future calculations" #t)(cx-gui-do cx-activate-item "Settings have changed!*Table1*ToggleBox2*Use settings changes for current and future calculations")(cx-gui-do cx-activate-item "Settings have changed!*PanelButtons*PushButton1(OK)")')
+results1.Edit()
+results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0, -0.0125, 0.025
+    Scale = 4.27807
+    Pan = 0, 0
+    Rotation Quaternion = 0, 0, 0, 1
+    
+  END
+
+END
+
+VIEW:View 1
+  Light Angle = 50, 110
+END
+
+VIEW:View 2
+  Light Angle = 50, 110
+END
+
+VIEW:View 3
+  Light Angle = 50, 110
+END
+
+VIEW:View 4
+  Light Angle = 50, 110
+END
+
+> update
+> autolegend plot=/CONTOUR:Contour 1, view=VIEW:View 1""")
+results1.SendCommand(Command="""CONTOUR:Contour 1
+Apply Instancing Transform = On
+Clip Contour = Off
+Colour Map = Default Colour Map
+Colour Scale = Linear
+Colour Variable = Velocity
+Colour Variable Boundary Values = Conservative
+Constant Contour Colour = Off
+Contour Range = Global
+Culling Mode = No Culling
+Domain List = fluid
+Draw Contours = On
+Font = Sans Serif
+Fringe Fill = On
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Lighting = On
+Line Colour = 0, 0, 0
+Line Colour Mode = Default
+Line Width = 1
+Location List = symmetry
+Max = 0.0 [m s^-1]
+Min = 0.0 [m s^-1]
+Number of Contours = 11
+Show Numbers = Off
+Specular Lighting = On
+Surface Drawing = Smooth Shading
+Text Colour = 0, 0, 0
+Text Colour Mode = Default
+Text Height = 0.024
+Transparency = 0.0
+Use Face Values = Off
+Value List = 0 [m s^-1],1 [m s^-1]
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>show /CONTOUR:Contour 1, view=/VIEW:View 1""")
+results1.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>hide /CONTOUR:Contour 1, view=/VIEW:View 1""")
+results1.SendCommand(Command="> autolegend plot=/CONTOUR:Contour 2, view=VIEW:View 1")
+results1.SendCommand(Command="""CONTOUR:Contour 2
+Apply Instancing Transform = On
+Clip Contour = Off
+Colour Map = Default Colour Map
+Colour Scale = Linear
+Colour Variable = Temperature
+Colour Variable Boundary Values = Conservative
+Constant Contour Colour = Off
+Contour Range = Global
+Culling Mode = No Culling
+Domain List = fluid
+Draw Contours = On
+Font = Sans Serif
+Fringe Fill = On
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Lighting = On
+Line Colour = 0, 0, 0
+Line Colour Mode = Default
+Line Width = 1
+Location List = symmetry
+Max = 0.0 [K]
+Min = 0.0 [K]
+Number of Contours = 11
+Show Numbers = Off
+Specular Lighting = On
+Surface Drawing = Smooth Shading
+Text Colour = 0, 0, 0
+Text Colour Mode = Default
+Text Height = 0.024
+Transparency = 0.0
+Use Face Values = Off
+Value List = 0 [K],1 [K]
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results1.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>show /CONTOUR:Contour 2, view=/VIEW:View 1""")
+results1.Exit()
+solutionComponent1 = system1.GetComponent(Name="Solution")
+solutionComponent1.Refresh()
+solutionComponent1.Update(AllDependencies=True)
+setup1.SendCommand(Command='(cx-gui-do cx-activate-tab-index "NavigationPane*Frame1(TreeTab)" 0)(cx-gui-do cx-activate-tab-index "NavigationPane*Frame1(TreeTab)" 1)')
+setup1.SendCommand(Command='/file/set-tui-version "21.2"')
+resultsComponent1 = system1.GetComponent(Name="Results")
+resultsComponent1.Refresh()
+results1.Edit()
+results1.SendCommand(Command="""VIEW:View 1
+  Light Angle = 50, 110
+END
+
+VIEW:View 2
+  Light Angle = 50, 110
+END
+
+VIEW:View 3
+  Light Angle = 50, 110
+END
+
+VIEW:View 4
+  Light Angle = 50, 110
+END
+
+> update
+# Sending visibility action from ViewUtilities
+>hide /CONTOUR:Contour 2, view=/VIEW:View 1""")
+results1.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>show /CONTOUR:Contour 1, view=/VIEW:View 1""")
+results1.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>hide /CONTOUR:Contour 1, view=/VIEW:View 1""")
+results1.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>show /CONTOUR:Contour 2, view=/VIEW:View 1""")
+results1.Exit()
+geometryComponent1 = system1.GetComponent(Name="Geometry")
+system2 = system1.Duplicate(
+    ComponentsToShare=[geometryComponent1],
+    RelativeTo=system1)
+system2.Delete()
+system1.Copy(KeepConnections=True)
+Save(Overwrite=True)
+system3 = GetSystem(Name="FFF 1")
+geometry1 = system3.GetContainer(ComponentName="Geometry")
+geometry1.Edit()
+geometry1.Exit()
+meshComponent1 = system3.GetComponent(Name="Mesh")
+meshComponent1.Update(AllDependencies=True)
+setupComponent1 = system3.GetComponent(Name="Setup")
+setupComponent1.Refresh()
+setup2 = system3.GetContainer(ComponentName="Setup")
+fluentLauncherSettings2 = setup2.GetFluentLauncherSettings()
+fluentLauncherSettings2.SetEntityProperties(Properties=Set(EnvPath={}))
+setup2.Edit()
+setup2.SendCommand(Command='(cx-gui-do cx-activate-tab-index "NavigationPane*Frame1(TreeTab)" 0)(cx-gui-do cx-activate-tab-index "NavigationPane*Frame1(TreeTab)" 1)')
+setup2.SendCommand(Command='/file/set-tui-version "21.2"(cx-gui-do cx-activate-item "Key Behavioral Changes*PanelButtons*PushButton1(OK)")')
+setup2.SendCommand(Command='(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Domain)*Table1*Table3(Mesh)*PushButton3(Units)")')
+setup2.SendCommand(Command="(cx-gui-do cx-set-list-selections \"Set Units*List1(Quantities)\" '( 43))(cx-gui-do cx-activate-item \"Set Units*List1(Quantities)\")(cx-gui-do cx-activate-item \"Set Units*PanelButtons*PushButton2(Cancel)\")")
+setup2.SendCommand(Command='(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame2(Domain)*Table1*Table3(Mesh)*PushButton4(Check)")')
+setup2.SendCommand(Command='(cx-gui-do cx-activate-item "MenuBar*PopupMenuCheck*Perform Mesh Check")')
+setup2.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Setup|Boundary Conditions|Inlet|velocity-inlet-small (velocity-inlet, id=9)"))')
+setup2.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Setup|Boundary Conditions|Inlet|velocity-inlet-small (velocity-inlet, id=9)"))(cx-gui-do cx-activate-item "NavigationPane*List_Tree1")')
+setup2.SendCommand(Command="(cx-gui-do cx-set-list-tree-selections \"NavigationPane*List_Tree1\" (list \"Setup|Boundary Conditions|Inlet|velocity-inlet-small (velocity-inlet, id=9)\"))(cx-gui-do cx-activate-tab-index \"Velocity Inlet*Frame2*Frame2\" 0)(cx-gui-do cx-activate-tab-index \"Velocity Inlet*Frame2*Frame2\" 1)(cx-gui-do cx-activate-tab-index \"Velocity Inlet*Frame2*Frame2\" 0)(cx-gui-do cx-activate-tab-index \"Velocity Inlet*Frame2*Frame2\" 2)(cx-gui-do cx-activate-tab-index \"Velocity Inlet*Frame2*Frame2\" 0)(cx-gui-do cx-activate-tab-index \"Velocity Inlet*Frame2*Frame2\" 3)(cx-gui-do cx-activate-tab-index \"Velocity Inlet*Frame2*Frame2\" 0)(cx-gui-do cx-activate-tab-index \"Velocity Inlet*Frame2*Frame2\" 4)(cx-gui-do cx-activate-tab-index \"Velocity Inlet*Frame2*Frame2\" 0)(cx-gui-do cx-activate-tab-index \"Velocity Inlet*Frame2*Frame2\" 5)(cx-gui-do cx-activate-tab-index \"Velocity Inlet*Frame2*Frame2\" 0)(cx-gui-do cx-activate-tab-index \"Velocity Inlet*Frame2*Frame2\" 6)(cx-gui-do cx-activate-tab-index \"Velocity Inlet*Frame2*Frame2\" 0)(cx-gui-do cx-activate-tab-index \"Velocity Inlet*Frame2*Frame2\" 7)(cx-gui-do cx-activate-tab-index \"Velocity Inlet*Frame2*Frame2\" 0)(cx-gui-do cx-activate-tab-index \"Velocity Inlet*Frame2*Frame2\" 8)(cx-gui-do cx-activate-tab-index \"Velocity Inlet*Frame2*Frame2\" 0)(cx-gui-do cx-enable-apply-button \"Velocity Inlet\")(cx-gui-do cx-set-expression-entry \"Velocity Inlet*Frame2*Frame2*Frame1(Momentum)*Table1*Table4(Turbulence)*ExpressionEntry11(Hydraulic Diameter)\" '(\"0.038\" . 0))(cx-gui-do cx-activate-item \"Velocity Inlet*PanelButtons*PushButton1(OK)\")")
+setup2.SendCommand(Command='(cx-gui-do cx-activate-item "Velocity Inlet*PanelButtons*PushButton2(Cancel)")')
+setup2.SendCommand(Command='(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*PushButton1(Initialization)")')
+setup2.SendCommand(Command='(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*Table3(Initialization)*PushButton5(Initialize)")')
+setup2.SendCommand(Command='(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*PushButton1(Run Calculation)")')
+setup2.SendCommand(Command='(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*PushButton1(Run Calculation)")')
+setup2.SendCommand(Command='(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame5(Solution)*Table1*Table3(Run Calculation)*PushButton7(Calculate)")')
+setup2.SendCommand(Command='(cx-gui-do cx-activate-item "Information*OK")')
+setup2.SendCommand(Command='(cx-gui-do cx-activate-item "MenuBar*FileMenu*Close Fluent")')
+results2 = system3.GetContainer(ComponentName="Results")
+results2.Edit()
+results2.SendCommand(Command="""VIEW:View 1
+  Light Angle = 50, 110
+END
+
+VIEW:View 2
+  Light Angle = 50, 110
+END
+
+VIEW:View 3
+  Light Angle = 50, 110
+END
+
+VIEW:View 4
+  Light Angle = 50, 110
+END
+
+> update
+# Sending visibility action from ViewUtilities
+>show /CONTOUR:Contour 1, view=/VIEW:View 1""")
+results2.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>hide /CONTOUR:Contour 2, view=/VIEW:View 1""")
+results2.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>show /CONTOUR:Contour 2, view=/VIEW:View 1""")
+results2.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>hide /CONTOUR:Contour 1, view=/VIEW:View 1""")
+results2.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>show /CONTOUR:Contour 1, view=/VIEW:View 1""")
+results2.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>hide /CONTOUR:Contour 2, view=/VIEW:View 1""")
+results2.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>show /CONTOUR:Contour 2, view=/VIEW:View 1""")
+results2.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>hide /CONTOUR:Contour 1, view=/VIEW:View 1""")
+results2.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>show /CONTOUR:Contour 1, view=/VIEW:View 1""")
+results2.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>hide /CONTOUR:Contour 2, view=/VIEW:View 1""")
+results2.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>show /CONTOUR:Contour 2, view=/VIEW:View 1""")
+results2.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>hide /CONTOUR:Contour 1, view=/VIEW:View 1""")
+results2.Exit()
+template1 = GetTemplate(TemplateName="Results")
+system4 = template1.CreateSystem(
+    Position="Right",
+    RelativeTo=system1)
+resultsComponent2 = system4.GetComponent(Name="Results")
+solutionComponent1.TransferData(TargetComponent=resultsComponent2)
+solutionComponent2 = system3.GetComponent(Name="Solution")
+solutionComponent2.TransferData(TargetComponent=resultsComponent2)
+results3 = system4.GetContainer(ComponentName="Results")
+results3.Edit()
+results3.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0, -0.0125, 0.025
+    Scale = 4.54545
+    Pan = 0, 0
+    Rotation Quaternion = 0, 0, 0, 1
+    
+  END
+
+END
+
+VIEW:View 2
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0, -0.0125, 0.025
+    Scale = 4.54545
+    Pan = 0, 0
+    Rotation Quaternion = 0, 0, 0, 1
+    
+  END
+
+END
+
+VIEW:View 1
+  Light Angle = 50, 110
+END
+
+VIEW:View 2
+  Light Angle = 50, 110
+END
+
+VIEW:View 3
+  Light Angle = 50, 110
+END
+
+VIEW:View 4
+  Light Angle = 50, 110
+END
+
+> update
+> autolegend plot=/CONTOUR:Contour 1, view=VIEW:View 1""")
+results3.SendCommand(Command=""">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/DOMAIN:fluid
+>highlight regionlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:fluid""")
+results3.SendCommand(Command=""">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/DOMAIN:fluid
+>highlight regionlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:fluid""")
+results3.SendCommand(Command=""">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/DOMAIN:fluid
+>highlight regionlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:fluid""")
+results3.SendCommand(Command=""">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/DOMAIN:fluid
+>highlight regionlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:fluid""")
+results3.SendCommand(Command=""">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/DOMAIN:fluid
+>highlight regionlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:fluid""")
+results3.SendCommand(Command=""">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/DOMAIN:fluid
+>highlight regionlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:fluid""")
+results3.SendCommand(Command=""">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/DOMAIN:fluid
+>highlight regionlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:fluid""")
+results3.SendCommand(Command=""">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:symmetry, domainlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/DOMAIN:fluid
+>highlight regionlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/BOUNDARY:symmetry, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:fluid""")
+results3.SendCommand(Command=""">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/DOMAIN:fluid
+>highlight regionlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:fluid""")
+results3.SendCommand(Command=""">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:symmetry, domainlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/DOMAIN:fluid
+>highlight regionlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/BOUNDARY:symmetry, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:fluid""")
+results3.SendCommand(Command=""">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:symmetry, domainlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/DOMAIN:fluid
+>highlight regionlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/BOUNDARY:symmetry, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:fluid""")
+results3.SendCommand(Command=""">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:symmetry, domainlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/DOMAIN:fluid
+>highlight regionlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/BOUNDARY:symmetry, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:fluid""")
+results3.SendCommand(Command=""">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:symmetry, domainlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/DOMAIN:fluid
+>highlight regionlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/BOUNDARY:symmetry, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:fluid""")
+results3.SendCommand(Command=""">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:symmetry, domainlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/DOMAIN:fluid
+>highlight regionlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/BOUNDARY:symmetry, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:fluid""")
+results3.Edit()
+results3.SendCommand(Command=""">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:symmetry, domainlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/DOMAIN:fluid
+>highlight regionlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/BOUNDARY:symmetry, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:fluid""")
+results3.SendCommand(Command=""">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:symmetry, domainlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/DOMAIN:fluid
+>highlight regionlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/BOUNDARY:symmetry, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:fluid""")
+results3.SendCommand(Command="""CONTOUR:Contour 1
+Apply Instancing Transform = On
+Clip Contour = Off
+Colour Map = Default Colour Map
+Colour Scale = Linear
+Colour Variable = Velocity
+Colour Variable Boundary Values = Conservative
+Constant Contour Colour = Off
+Contour Range = Global
+Culling Mode = No Culling
+Domain List = fluid
+Draw Contours = On
+Font = Sans Serif
+Fringe Fill = On
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Lighting = On
+Line Colour = 0, 0, 0
+Line Colour Mode = Default
+Line Width = 1
+Location List = symmetry
+Max = 0.0 [m s^-1]
+Min = 0.0 [m s^-1]
+Number of Contours = 11
+Show Numbers = Off
+Specular Lighting = On
+Surface Drawing = Smooth Shading
+Text Colour = 0, 0, 0
+Text Colour Mode = Default
+Text Height = 0.024
+Transparency = 0.0
+Use Face Values = Off
+Value List = 0 [m s^-1],1 [m s^-1]
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results3.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>show /CONTOUR:Contour 1, view=/VIEW:View 1""")
+results3.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>hide /CONTOUR:Contour 1, view=/VIEW:View 1""")
+results3.SendCommand(Command="> autolegend plot=/CONTOUR:Contour 2, view=VIEW:View 1")
+results3.SendCommand(Command=""">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/DOMAIN:fluid
+>highlight regionlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:fluid""")
+results3.SendCommand(Command=""">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/DOMAIN:fluid
+>highlight regionlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:fluid""")
+results3.SendCommand(Command=""">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/DOMAIN:fluid
+>highlight regionlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:fluid""")
+results3.SendCommand(Command=""">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/DOMAIN:fluid
+>highlight regionlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:fluid""")
+results3.SendCommand(Command=""">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/DOMAIN:fluid
+>highlight regionlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:fluid""")
+results3.SendCommand(Command=""">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/DOMAIN:fluid
+>highlight regionlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:fluid""")
+results3.SendCommand(Command=""">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/DOMAIN:fluid
+>highlight regionlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:fluid""")
+results3.SendCommand(Command=""">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/DOMAIN:fluid
+>highlight regionlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:fluid""")
+results3.SendCommand(Command=""">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/DOMAIN:fluid
+>highlight regionlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:fluid""")
+results3.SendCommand(Command=""">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:symmetry, domainlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/DOMAIN:fluid
+>highlight regionlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/BOUNDARY:symmetry, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:fluid""")
+results3.SendCommand(Command=""">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/DOMAIN:fluid
+>highlight regionlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:fluid""")
+results3.SendCommand(Command=""">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/DOMAIN:fluid
+>highlight regionlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:fluid""")
+results3.SendCommand(Command=""">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/DOMAIN:fluid
+>highlight regionlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:fluid""")
+results3.SendCommand(Command=""">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:symmetry, domainlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/DOMAIN:fluid
+>highlight regionlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/BOUNDARY:symmetry, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:fluid""")
+results3.SendCommand(Command=""">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/DOMAIN:fluid
+>highlight regionlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/BOUNDARY:pressure outlet, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:fluid""")
+results3.SendCommand(Command=""">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:symmetry, domainlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/DOMAIN:fluid
+>highlight regionlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/BOUNDARY:symmetry, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:fluid""")
+results3.SendCommand(Command=""">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:symmetry, domainlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/DOMAIN:fluid
+>highlight regionlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/BOUNDARY:symmetry, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:fluid""")
+results3.SendCommand(Command=""">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:symmetry, domainlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/DOMAIN:fluid
+>highlight regionlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/BOUNDARY:symmetry, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:fluid""")
+results3.SendCommand(Command=""">highlight regionlist=/DATA READER/CASE:Case FFF/BOUNDARY:symmetry, domainlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/DOMAIN:fluid
+>highlight regionlist=/DATA READER/CASE:Case Copy of Fluid Flow Fluent/BOUNDARY:symmetry, domainlist=/DATA READER/CASE:Case FFF/DOMAIN:fluid""")
+results3.SendCommand(Command="""CONTOUR:Contour 2
+Apply Instancing Transform = On
+Clip Contour = Off
+Colour Map = Default Colour Map
+Colour Scale = Linear
+Colour Variable = Temperature
+Colour Variable Boundary Values = Conservative
+Constant Contour Colour = Off
+Contour Range = Global
+Culling Mode = No Culling
+Domain List = fluid
+Draw Contours = On
+Font = Sans Serif
+Fringe Fill = On
+Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+Lighting = On
+Line Colour = 0, 0, 0
+Line Colour Mode = Default
+Line Width = 1
+Location List = symmetry
+Max = 0.0 [K]
+Min = 0.0 [K]
+Number of Contours = 11
+Show Numbers = Off
+Specular Lighting = On
+Surface Drawing = Smooth Shading
+Text Colour = 0, 0, 0
+Text Colour Mode = Default
+Text Height = 0.024
+Transparency = 0.0
+Use Face Values = Off
+Value List = 0 [K],1 [K]
+  OBJECT VIEW TRANSFORM:
+  Apply Reflection = Off
+  Apply Rotation = Off
+  Apply Scale = Off
+  Apply Translation = Off
+  Principal Axis = Z
+  Reflection Plane Option = XY Plane
+  Rotation Angle = 0.0 [degree]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 0 [m]
+  Rotation Axis Type = Principal Axis
+  Scale Vector = 1 , 1 , 1 
+  Translation Vector = 0 [m], 0 [m], 0 [m]
+  X = 0.0 [m]
+  Y = 0.0 [m]
+  Z = 0.0 [m]
+  END
+END""")
+results3.SendCommand(Command="""# Sending visibility action from ViewUtilities
+>show /CONTOUR:Contour 2, view=/VIEW:View 1""")
+results3.Exit()
+Save(Overwrite=True)
